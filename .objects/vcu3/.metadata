@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Edge Home  Global Health",
+  "Type": "App",
+  "Id": "vcu3-z4zREeYlBfKLqwvww",
+  "Reference": "9L5wzsuqe0e4nDMBsS2Ebw/vcu3-z4zREeYlBfKLqwvww",
+  "Created": "2026-01-29T15:47:26.5856765Z",
+  "Updated": "2026-01-29T15:47:26.5856765Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

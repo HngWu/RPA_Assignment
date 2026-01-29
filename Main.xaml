@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -25,6 +25,14 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -53,13 +61,49 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="2399,981.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Home  Global Health" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,340" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c6b205ef-07d4-40e2-b4e5-5cc53d02fb3b" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 3456, 1456" BrowserType="Edge" ContentHash="G6sKc4AtUkOVFnLx4qu2lg" IconBase64="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" InformativeScreenshot="2e073b87236cf8455b795a01b331a68c.jpg" Reference="9L5wzsuqe0e4nDMBsS2Ebw/Zqwjsjat8Uq04My8Am5gnA" Selector="&lt;html app='msedge.exe' title='Home | Global Health' /&gt;" Url="https://lookitfan.wixsite.com/vitalityvision" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Home  Global Health",
+  "Type": "Screen",
+  "Id": "Zqwjsjat8Uq04My8Am5gnA",
+  "Reference": "9L5wzsuqe0e4nDMBsS2Ebw/Zqwjsjat8Uq04My8Am5gnA",
+  "ParentRef": "9L5wzsuqe0e4nDMBsS2Ebw/7a4a6b0IZkiKSe-Qs95TcQ",
+  "Created": "2026-01-29T15:47:26.7766372Z",
+  "Updated": "2026-01-29T15:47:26.7766372Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
