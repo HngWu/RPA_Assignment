@@ -6,8 +6,8 @@
   "OriginalIconFileName": null,
   "Arguments": [
     {
-      "Name": "customerDT",
-      "DisplayName": "customerDT",
+      "Name": "in_CustomerDT",
+      "DisplayName": "in_CustomerDT",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,

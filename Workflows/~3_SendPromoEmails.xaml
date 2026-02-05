@@ -1,6 +1,10 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="_3_SendPromoEmails" this:_3_SendPromoEmails.in_CustomerDT="[New System.Data.DataTable]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_CustomerDT" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_CustomerDT" Type="InArgument(sd:DataTable)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -228,9 +232,16 @@
       <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
       <AssemblyReference>System.Linq.Parallel</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="673,1269" sap2010:WorkflowViewState.IdRef="Sequence_36">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap:VirtualizedContainerService.HintSize="670,1974" sap2010:WorkflowViewState.IdRef="Sequence_36">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataRow" Name="CurrentRow" />
       <Variable x:TypeArguments="x:Boolean" Name="invalidAge" />
@@ -256,14 +267,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_CustomerDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="452,1246" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_CustomerDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="524,1951" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,1073" sap2010:WorkflowViewState.IdRef="Sequence_35">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,1778" sap2010:WorkflowViewState.IdRef="Sequence_35">
             <Sequence.Variables>
+              <Variable x:TypeArguments="x:Double" Name="bmiValue" />
               <Variable x:TypeArguments="x:Boolean" Name="invalidClinicEmail" />
               <Variable x:TypeArguments="x:Boolean" Name="invalidName" />
               <Variable x:TypeArguments="s:DateTime" Name="visitDate" />
@@ -274,9 +286,10 @@
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign DisplayName="Check for invalid Name" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign DisplayName="Check for invalid Name" sap:VirtualizedContainerService.HintSize="488,61" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[invalidName]</OutArgument>
               </Assign.To>
@@ -294,7 +307,7 @@ OrElse Not System.Text.RegularExpressions.Regex.IsMatch(
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign DisplayName="Check for Invalid Age" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign DisplayName="Check for Invalid Age" sap:VirtualizedContainerService.HintSize="488,61" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[invalidAge]</OutArgument>
               </Assign.To>
@@ -310,7 +323,7 @@ OrElse ageValue &gt; 100]</InArgument>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign DisplayName="Check for Invalid Gender" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign DisplayName="Check for Invalid Gender" sap:VirtualizedContainerService.HintSize="488,61" sap2010:WorkflowViewState.IdRef="Assign_5">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[invalidGender]</OutArgument>
               </Assign.To>
@@ -324,7 +337,7 @@ OrElse ageValue &gt; 100]</InArgument>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign DisplayName="Check for Invalid Height" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign DisplayName="Check for Invalid Height" sap:VirtualizedContainerService.HintSize="488,61" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[invalidHeight]</OutArgument>
               </Assign.To>
@@ -340,7 +353,7 @@ OrElse heightValue &gt; 2.5]</InArgument>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign DisplayName="Check for Invalid Weight" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign DisplayName="Check for Invalid Weight" sap:VirtualizedContainerService.HintSize="488,61" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[invalidWeight]</OutArgument>
               </Assign.To>
@@ -356,7 +369,7 @@ OrElse weightValue &gt; 300]</InArgument>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign DisplayName="Check for Invalid Email" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign DisplayName="Check for Invalid Email" sap:VirtualizedContainerService.HintSize="488,61" sap2010:WorkflowViewState.IdRef="Assign_6">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[invalidEmail]</OutArgument>
               </Assign.To>
@@ -373,7 +386,7 @@ OrElse weightValue &gt; 300]</InArgument>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign DisplayName="Check for Invalid Smoke" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="Assign_9">
+            <Assign DisplayName="Check for Invalid Smoke" sap:VirtualizedContainerService.HintSize="488,61" sap2010:WorkflowViewState.IdRef="Assign_9">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[invalidSmoke]</OutArgument>
               </Assign.To>
@@ -387,7 +400,7 @@ OrElse weightValue &gt; 300]</InArgument>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign DisplayName="Check for Invalid Drink" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="Assign_7">
+            <Assign DisplayName="Check for Invalid Drink" sap:VirtualizedContainerService.HintSize="488,61" sap2010:WorkflowViewState.IdRef="Assign_7">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[invalidDrink]</OutArgument>
               </Assign.To>
@@ -401,7 +414,7 @@ OrElse weightValue &gt; 300]</InArgument>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign DisplayName="Check for Invalid On Medication" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_8">
+            <Assign DisplayName="Check for Invalid On Medication" sap:VirtualizedContainerService.HintSize="488,61" sap2010:WorkflowViewState.IdRef="Assign_8">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[invalidOnMedication]</OutArgument>
               </Assign.To>
@@ -415,7 +428,7 @@ OrElse weightValue &gt; 300]</InArgument>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign DisplayName="Check for Invalid Medication" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="Assign_11">
+            <Assign DisplayName="Check for Invalid Medication" sap:VirtualizedContainerService.HintSize="488,61" sap2010:WorkflowViewState.IdRef="Assign_11">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[invalidMedication]</OutArgument>
               </Assign.To>
@@ -430,7 +443,7 @@ AndAlso String.IsNullOrWhiteSpace(CurrentRow("Medication").ToString)]</InArgumen
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign DisplayName="Check for Invalid MPFH" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_12">
+            <Assign DisplayName="Check for Invalid MPFH" sap:VirtualizedContainerService.HintSize="488,61" sap2010:WorkflowViewState.IdRef="Assign_12">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[invalidBPFH]</OutArgument>
               </Assign.To>
@@ -444,7 +457,7 @@ AndAlso String.IsNullOrWhiteSpace(CurrentRow("Medication").ToString)]</InArgumen
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign DisplayName="Check for Invalid Attending Clinic" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_13">
+            <Assign DisplayName="Check for Invalid Attending Clinic" sap:VirtualizedContainerService.HintSize="488,61" sap2010:WorkflowViewState.IdRef="Assign_13">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[invalidAttendingClinic]</OutArgument>
               </Assign.To>
@@ -462,7 +475,7 @@ OrElse Not System.Text.RegularExpressions.Regex.IsMatch(
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign DisplayName="Check for Invalid Clinic Email" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_10">
+            <Assign DisplayName="Check for Invalid Clinic Email" sap:VirtualizedContainerService.HintSize="488,61" sap2010:WorkflowViewState.IdRef="Assign_10">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[invalidClinicEmail]</OutArgument>
               </Assign.To>
@@ -480,7 +493,7 @@ AndAlso Not System.Text.RegularExpressions.Regex.IsMatch(
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign DisplayName="Check for Invalid Visit Date" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_14">
+            <Assign DisplayName="Check for Invalid Visit Date" sap:VirtualizedContainerService.HintSize="488,61" sap2010:WorkflowViewState.IdRef="Assign_14">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[invalidVisitDate]</OutArgument>
               </Assign.To>
@@ -497,11 +510,11 @@ AndAlso Not System.Text.RegularExpressions.Regex.IsMatch(
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <If Condition="[invalidName _&#xD;&#xA;OrElse invalidAge _&#xD;&#xA;OrElse invalidGender _&#xD;&#xA;OrElse invalidHeight _&#xD;&#xA;OrElse invalidWeight _&#xD;&#xA;OrElse invalidEmail _&#xD;&#xA;OrElse invalidSmoke _&#xD;&#xA;OrElse invalidDrink _&#xD;&#xA;OrElse invalidBPFH _&#xD;&#xA;OrElse invalidOnMedication _&#xD;&#xA;OrElse invalidMedication _&#xD;&#xA;OrElse invalidAttendingClinic _&#xD;&#xA;OrElse invalidClinicEmail _&#xD;&#xA;OrElse invalidVisitDate]" DisplayName="Master Validation Condition" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="If_12">
+            <If Condition="[invalidName _&#xD;&#xA;OrElse invalidAge _&#xD;&#xA;OrElse invalidGender _&#xD;&#xA;OrElse invalidHeight _&#xD;&#xA;OrElse invalidWeight _&#xD;&#xA;OrElse invalidEmail _&#xD;&#xA;OrElse invalidSmoke _&#xD;&#xA;OrElse invalidDrink _&#xD;&#xA;OrElse invalidBPFH _&#xD;&#xA;OrElse invalidOnMedication _&#xD;&#xA;OrElse invalidMedication _&#xD;&#xA;OrElse invalidAttendingClinic _&#xD;&#xA;OrElse invalidClinicEmail _&#xD;&#xA;OrElse invalidVisitDate]" DisplayName="Master Validation Condition" sap:VirtualizedContainerService.HintSize="488,808" sap2010:WorkflowViewState.IdRef="If_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
@@ -509,6 +522,7 @@ AndAlso Not System.Text.RegularExpressions.Regex.IsMatch(
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Assign sap:VirtualizedContainerService.HintSize="452,170" sap2010:WorkflowViewState.IdRef="Assign_15">
@@ -533,17 +547,23 @@ AndAlso Not System.Text.RegularExpressions.Regex.IsMatch(
     If(invalidVisitDate, "Invalid Last Visit Date", "") _
 }).Where(Function(s) Not String.IsNullOrWhiteSpace(s)).ToArray())]</InArgument>
                     </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
                   </Assign>
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,352" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,431" sap2010:WorkflowViewState.IdRef="Sequence_46">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Basic Medical Screening - Data Bank" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,292" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" ScopeGuid="004e6bd4-519d-43e4-a40c-c02dc123b55c" Version="V2">
+                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Basic Medical Screening - Data Bank" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,61" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" ScopeGuid="004e6bd4-519d-43e4-a40c-c02dc123b55c" Version="V2">
                     <uix:NApplicationCard.AutoGenerationOptions>
                       <uix:GenerationOptions ExpectedInputs="{x:Null}" Prompt="{x:Null}" Url="{x:Null}">
                         <uix:GenerationOptions.ExpectedOutputs>
@@ -585,17 +605,71 @@ AndAlso Not System.Text.RegularExpressions.Regex.IsMatch(
                       </uix:TargetApp>
                     </uix:NApplicationCard.TargetApp>
                   </uix:NApplicationCard>
+                  <Assign sap:VirtualizedContainerService.HintSize="452,61" sap2010:WorkflowViewState.IdRef="Assign_16">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Double">[bmiValue]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Double" xml:space="preserve">[CDbl(CurrentRow("Weight (Kg)")) /
+(Math.Pow(CDbl(CurrentRow("Height (m)")), 2))]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <If Condition="[bmiValue &gt; 25 _&#xD;&#xA;AndAlso CurrentRow(&quot;BP Family History&quot;).ToString.Trim = &quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="452,61" sap2010:WorkflowViewState.IdRef="If_13">
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <If Condition="[{&quot;Singapore Opto Specialist&quot;,&#xD;&#xA; &quot;General Vitals (Bishan)&quot;,&#xD;&#xA; &quot;Toa Payoh Vitality&quot;}.Contains(&#xD;&#xA;    CurrentRow(&quot;Attending Clinic&quot;).ToString.Trim&#xD;&#xA;)]" sap:VirtualizedContainerService.HintSize="452,184" sap2010:WorkflowViewState.IdRef="If_14">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
                 </Sequence>
               </If.Else>
             </If>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,118" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[errorMessage]" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="488,52" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[errorMessage]" />
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
