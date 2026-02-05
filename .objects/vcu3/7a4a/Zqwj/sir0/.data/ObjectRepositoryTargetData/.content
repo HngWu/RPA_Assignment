@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="d1cvsGet3kmrl9ZBt1HVOw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="lookitfan.wixsite.com/vitalityvision/medical-records" DesignTimeRectangle="1601, 875, 239, 48" DesignTimeScaleFactor="1" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='nZAoOs' aaname='Go' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Go' /&gt;" Guid="2129d87f-0dcd-479f-8f69-c8f62b740b5e" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Blank Page | Global Health' /&gt;" SearchSteps="Selector" Version="V6">
+      <TargetAnchorable.PointOffset>
+        <PointOffset />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="a5b1a853ea6b504e030d72c0fc19b29a.png" xmlns="">0KC6BsyxUXkmal68P-lP1uA</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

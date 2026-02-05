@@ -5,6 +5,23 @@
       "filePath": "Main.xaml",
       "uniqueId": "c9ff58a1-29d1-4793-922b-cbc89efcf473",
       "type": "process"
+    },
+    {
+      "filePath": "Workflows\\3_SendPromoEmails.xaml",
+      "uniqueId": "13c9831b-75dc-46ef-88d4-a9d05678317d",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "customerDT": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        },
+        "required": []
+      }
     }
   ]
 }

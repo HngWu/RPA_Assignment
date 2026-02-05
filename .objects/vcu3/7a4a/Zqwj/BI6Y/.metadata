@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Medical Records",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "BI6YkD8lhky7WvXhd5hDwA",
+  "Reference": "9L5wzsuqe0e4nDMBsS2Ebw/BI6YkD8lhky7WvXhd5hDwA",
+  "ParentRef": "9L5wzsuqe0e4nDMBsS2Ebw/Zqwjsjat8Uq04My8Am5gnA",
+  "Created": "2026-02-01T14:24:12.0280595Z",
+  "Updated": "2026-02-01T14:24:12.0280595Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="IKRWaxNB8UqIYxoVdTB1QQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="lookitfan.wixsite.com/vitalityvision/medical-records" DesignTimeRectangle="1601, 797, 239, 26" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='SM_ROOT_COMP_input' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='SM_ROOT_COMP_input' tag='INPUT' type='password' class='' placeholder='Password' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="95d3be4f-9514-421a-b03b-783a11e3d2a9" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Blank Page | Global Health' /&gt;" SearchSteps="Selector" Version="V6">
+      <TargetAnchorable.PointOffset>
+        <PointOffset />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="331e416559c36d24fed642f4fa30cb4f.png" xmlns="">08p8FSzjNxU-TNvjhpobSVA</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

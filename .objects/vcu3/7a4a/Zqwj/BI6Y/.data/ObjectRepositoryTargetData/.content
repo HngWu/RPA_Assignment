@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="YUWUYjeHgEO6tCZ_WxUD5Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="lookitfan.wixsite.com/vitalityvision" CVScreenId="28f39d0c-a5de-420b-a23b-657961863211" CvTextArea="1878, 354, 105, 14" CvTextArgument="Medical Records" CvType="Text" DesignTimeRectangle="1869, 348, 123, 30" DesignTimeScaleFactor="1" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Medical Records' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Medical Records' tag='P' type='' class='JS76Uv' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Medical Records' /&gt;" Guid="0ce03a4b-0b2d-4e46-8227-b8d06e4e8b45" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home | Global Health' /&gt;" SearchSteps="Selector, CV" Version="V6">
+      <TargetAnchorable.PointOffset>
+        <PointOffset />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="b1c9df0c6ca06c6ebcc97eb27a4b0617.png" xmlns="">0PYxKq0XSPE-12d_n3-3l1Q</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "INPUT SM_ROOT_COMP_input",
+  "Type": "Element",
+  "TaxonomyType": "Password",
+  "Id": "nMX8Ph8r4kK_xeE6gW5ajw",
+  "Reference": "9L5wzsuqe0e4nDMBsS2Ebw/nMX8Ph8r4kK_xeE6gW5ajw",
+  "ParentRef": "9L5wzsuqe0e4nDMBsS2Ebw/Zqwjsjat8Uq04My8Am5gnA",
+  "Created": "2026-02-01T14:24:21.2140667Z",
+  "Updated": "2026-02-01T14:24:21.2140667Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
