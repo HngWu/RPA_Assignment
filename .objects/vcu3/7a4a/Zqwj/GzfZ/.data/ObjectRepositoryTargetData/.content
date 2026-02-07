@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="G_5LsPvU7kuMNBxkTjhR_w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="lookitfan.wixsite.com/vitalityvision" DesignTimeRectangle="-8, 442, 3457, 1110" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='FLUID-COLUMNS-REPEATER' /&gt;" Guid="84ae5f8b-cba8-46d4-bee1-885bc706a900" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home | Global Health' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="8de469593a46e7175d4a7e4c68256a64.png" xmlns="">0pfuHRN5eUUaEjV0cKI7JQg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

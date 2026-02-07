@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="4MXbletIWkeaTdLHo4llDg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="e7716c47-cda9-49dc-89c6-25283eaa6fad" CvElementArea="1423, 1140, 25, 25" CvType="RadioButton" DesignTimeRectangle="1426, 1043, 20, 20" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;label&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='i32' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='i32' tag='DIV' class='AB7Lab Id5V1' aaname='' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="df64c778-4cca-4b87-9ddb-f2cae0e2aa51" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
+      <TargetAnchorable.PointOffset>
+        <PointOffset />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="6ef4eb416c9635ae7b0f9e5a9376eddf.png" xmlns="">0UE4igbJaAEuK4F4nZVtf0g</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="aAggsfnvPUKT63eoAxeGUg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="2bd2a35a-17be-4ee3-97a4-3463f2278939" CvElementArea="1408, 467, 641, 128" CvType="InputBox" DesignTimeRectangle="1433, 489, 295, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='whsOnd zHQkBf' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="5cb6f86a-2f8a-4d47-9975-9288ce65ed1a" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
+      <TargetAnchorable.PointOffset>
+        <PointOffset />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="cd276ae3f3bf6f34a76f928e9af0746a.png" xmlns="">0v-vE4fH71UaTZ653EqB1aQ</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

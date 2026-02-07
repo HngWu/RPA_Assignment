@@ -1,0 +1,443 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_3_ValidateCustomerData" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="_3_ValidateCustomerData_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_3_ValidateCustomerData" sap:VirtualizedContainerService.HintSize="2392,9035" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="ageValue" />
+      <Variable x:TypeArguments="x:Double" Name="heightValue" />
+      <Variable x:TypeArguments="x:Double" Name="weightValue" />
+      <Variable x:TypeArguments="s:DateTime" Name="visitDate" />
+      <Variable x:TypeArguments="x:String" Name="errorMessage">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Name="invalidCustomerDT" />
+      <Variable x:TypeArguments="sd:DataTable" Name="validCustomerDT" />
+      <Variable x:TypeArguments="sd:DataTable" Name="rawCustomerDT" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[rawCustomerDT]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="667,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Customers" WorkbookPath="[&quot;Data\Output\Raw Customer Data (&quot; + Date.Today.ToString(&quot;dd-MM-yyyy&quot;) + &quot;).xlsx&quot;]" />
+    <Assign sap:VirtualizedContainerService.HintSize="667,175" sap2010:WorkflowViewState.IdRef="Assign_16">
+      <Assign.To>
+        <OutArgument x:TypeArguments="sd:DataTable">[invalidCustomerDT]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="sd:DataTable">[rawCustomerDT.clone()]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="667,175" sap2010:WorkflowViewState.IdRef="Assign_17">
+      <Assign.To>
+        <OutArgument x:TypeArguments="sd:DataTable">[validCustomerDT]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="sd:DataTable">[rawCustomerDT.clone()]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Error" DataTable="[invalidCustomerDT]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="667,221" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[rawCustomerDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="667,7586" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="665,7404" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:IfElseIfV2 Condition="[String.IsNullOrWhiteSpace(CurrentRow(&quot;Name&quot;).ToString) _&#xD;&#xA;OrElse Not System.Text.RegularExpressions.Regex.IsMatch(&#xD;&#xA;    CurrentRow(&quot;Name&quot;).ToString.Trim,&#xD;&#xA;    &quot;^[A-Za-z\s]+$&quot;&#xD;&#xA;)]" DisplayName="Check for invalid Name" sap:VirtualizedContainerService.HintSize="631,7340" sap2010:WorkflowViewState.IdRef="IfElseIfV2_2">
+              <ui:IfElseIfV2.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="629,227" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="595,163" sap2010:WorkflowViewState.IdRef="InvokeMethod_15" MethodName="ImportRow">
+                    <InvokeMethod.TargetObject>
+                      <InArgument x:TypeArguments="sd:DataTable">[validCustomerDT]</InArgument>
+                    </InvokeMethod.TargetObject>
+                    <InArgument x:TypeArguments="sd:DataRow">
+                      <VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="CurrentRow" />
+                    </InArgument>
+                  </InvokeMethod>
+                </Sequence>
+              </ui:IfElseIfV2.Else>
+              <ui:IfElseIfV2.ElseIfs>
+                <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Not Integer.TryParse(CurrentRow(&quot;Age&quot;).ToString, ageValue) _&#xD;&#xA;OrElse ageValue &lt; 1 _&#xD;&#xA;OrElse ageValue &gt; 100]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_15">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Check for Invalid Age" sap:VirtualizedContainerService.HintSize="629,459" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="595,179" sap2010:WorkflowViewState.IdRef="Assign_19">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[errorMessage]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Invalid Data in the 'Age' column"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray.Concat({errorMessage}).ToArray()]" DataTable="[invalidCustomerDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="595,216" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Not {&quot;male&quot;,&quot;female&quot;}.Contains(CurrentRow(&quot;Gender&quot;).ToString.Trim.ToLower)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_16">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Check for Invalid Gender" sap:VirtualizedContainerService.HintSize="629,459" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="595,179" sap2010:WorkflowViewState.IdRef="Assign_20">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[errorMessage]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Invalid Data in the 'Gender' column"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray.Concat({errorMessage}).ToArray()]" DataTable="[invalidCustomerDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="595,216" sap2010:WorkflowViewState.IdRef="AddDataRow_5" />
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Not Double.TryParse(CurrentRow(&quot;Height (m)&quot;).ToString, heightValue) _&#xD;&#xA;OrElse heightValue &lt; 0.5 _&#xD;&#xA;OrElse heightValue &gt; 2.5]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_17">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Check for Invalid Height" sap:VirtualizedContainerService.HintSize="629,459" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="595,179" sap2010:WorkflowViewState.IdRef="Assign_21">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[errorMessage]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Invalid Data in the 'Height' column"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray.Concat({errorMessage}).ToArray()]" DataTable="[invalidCustomerDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="595,216" sap2010:WorkflowViewState.IdRef="AddDataRow_6" />
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Not Double.TryParse(CurrentRow(&quot;Weight (Kg)&quot;).ToString, weightValue) _&#xD;&#xA;OrElse weightValue &lt; 30 _&#xD;&#xA;OrElse weightValue &gt; 300]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_18">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Check for Invalid Weight" sap:VirtualizedContainerService.HintSize="629,459" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="595,179" sap2010:WorkflowViewState.IdRef="Assign_22">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[errorMessage]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Invalid Data in the 'Weight' column"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray.Concat({errorMessage}).ToArray()]" DataTable="[invalidCustomerDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="595,216" sap2010:WorkflowViewState.IdRef="AddDataRow_7" />
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Not System.Text.RegularExpressions.Regex.IsMatch(&#xD;&#xA;    CurrentRow(&quot;Email Address&quot;).ToString,&#xD;&#xA;    &quot;^[^@\s]+@[^@\s]+\.[^@\s]+$&quot;&#xD;&#xA;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_19">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Check for Invalid Email" sap:VirtualizedContainerService.HintSize="629,459" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="595,179" sap2010:WorkflowViewState.IdRef="Assign_23">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[errorMessage]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Invalid Data in the 'Email' column"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray.Concat({errorMessage}).ToArray()]" DataTable="[invalidCustomerDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="595,216" sap2010:WorkflowViewState.IdRef="AddDataRow_8" />
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Not {&quot;Yes&quot;,&quot;No&quot;}.Contains(CurrentRow(&quot;Smoke&quot;).ToString.Trim)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_20">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Check for Invalid Smoke" sap:VirtualizedContainerService.HintSize="629,459" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="595,179" sap2010:WorkflowViewState.IdRef="Assign_24">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[errorMessage]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Invalid Data in the 'Smoke' column"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray.Concat({errorMessage}).ToArray()]" DataTable="[invalidCustomerDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="595,216" sap2010:WorkflowViewState.IdRef="AddDataRow_9" />
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Not {&quot;Yes&quot;,&quot;No&quot;}.Contains(CurrentRow(&quot;Drink&quot;).ToString.Trim)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_21">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Check for Invalid Drink" sap:VirtualizedContainerService.HintSize="629,459" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="595,179" sap2010:WorkflowViewState.IdRef="Assign_25">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[errorMessage]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Invalid Data in the 'Drink' column"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray.Concat({errorMessage}).ToArray()]" DataTable="[invalidCustomerDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="595,216" sap2010:WorkflowViewState.IdRef="AddDataRow_10" />
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Not {&quot;Yes&quot;,&quot;No&quot;}.Contains(CurrentRow(&quot;On Medication&quot;).ToString.Trim)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_22">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Check for Invalid On Medication" sap:VirtualizedContainerService.HintSize="629,459" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="595,179" sap2010:WorkflowViewState.IdRef="Assign_26">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[errorMessage]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Invalid Data in the 'On Medication' column"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray.Concat({errorMessage}).ToArray()]" DataTable="[invalidCustomerDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="595,216" sap2010:WorkflowViewState.IdRef="AddDataRow_11" />
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[CurrentRow(&quot;On Medication&quot;).ToString.Trim = &quot;Yes&quot; _&#xD;&#xA;AndAlso String.IsNullOrWhiteSpace(CurrentRow(&quot;Medication&quot;).ToString)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_23">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Check for Invalid Medication" sap:VirtualizedContainerService.HintSize="629,459" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="595,179" sap2010:WorkflowViewState.IdRef="Assign_27">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[errorMessage]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Invalid Data in the 'Medication' column"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray.Concat({errorMessage}).ToArray()]" DataTable="[invalidCustomerDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="595,216" sap2010:WorkflowViewState.IdRef="AddDataRow_12" />
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Not {&quot;Yes&quot;,&quot;No&quot;,&quot;Unsure&quot;}.Contains(CurrentRow(&quot;BP Family History&quot;).ToString.Trim)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_24">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Check for Invalid MPFH" sap:VirtualizedContainerService.HintSize="629,459" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="595,179" sap2010:WorkflowViewState.IdRef="Assign_28">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[errorMessage]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Invalid Data in the 'MPFH' column"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray.Concat({errorMessage}).ToArray()]" DataTable="[invalidCustomerDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="595,216" sap2010:WorkflowViewState.IdRef="AddDataRow_13" />
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[String.IsNullOrWhiteSpace(CurrentRow(&quot;Attending Clinic&quot;).ToString) _&#xD;&#xA;OrElse Not System.Text.RegularExpressions.Regex.IsMatch(&#xD;&#xA;    CurrentRow(&quot;Attending Clinic&quot;).ToString.Trim,&#xD;&#xA;    &quot;^[A-Za-z\s()]+$&quot;&#xD;&#xA;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_25">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Check for Invalid Attending Clinic" sap:VirtualizedContainerService.HintSize="629,459" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="595,179" sap2010:WorkflowViewState.IdRef="Assign_29">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[errorMessage]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Invalid Data in the 'Attending Clinic' column"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray.Concat({errorMessage}).ToArray()]" DataTable="[invalidCustomerDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="595,216" sap2010:WorkflowViewState.IdRef="AddDataRow_14" />
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Not DateTime.TryParse(&#xD;&#xA;    CurrentRow(&quot;Last date of visit&quot;).ToString,&#xD;&#xA;    visitDate&#xD;&#xA;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_26">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Check for Invalid Visit Date" sap:VirtualizedContainerService.HintSize="629,459" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="595,179" sap2010:WorkflowViewState.IdRef="Assign_31">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[errorMessage]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Invalid Data in the 'Visit Date' column"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray.Concat({errorMessage}).ToArray()]" DataTable="[invalidCustomerDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="595,216" sap2010:WorkflowViewState.IdRef="AddDataRow_16" />
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                </sc:BindingList>
+              </ui:IfElseIfV2.ElseIfs>
+              <ui:IfElseIfV2.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="629,459" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="595,179" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[errorMessage]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">["Invalid Data in the 'Name' column"]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray.Concat({errorMessage}).ToArray()]" DataTable="[invalidCustomerDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="595,216" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                </Sequence>
+              </ui:IfElseIfV2.Then>
+            </ui:IfElseIfV2>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+    <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;Data\Output\Valid Customer Data (&quot; + Date.Today.ToString(&quot;dd-MM-yyyy&quot;) + &quot;).xlsx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="667,224" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="Data/Template/Customer Data Template.xlsx" />
+    <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;Data\Output\Invalid Customer Data (&quot; + Date.Today.ToString(&quot;dd-MM-yyyy&quot;) + &quot;).xlsx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="667,224" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="Data/Template/Customer Data Template.xlsx" />
+    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[validCustomerDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="667,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Customers" WorkbookPath="[&quot;Data\Output\Valid Customer Data (&quot; + Date.Today.ToString(&quot;dd-MM-yyyy&quot;) + &quot;).xlsx&quot;]" />
+    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[invalidCustomerDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="667,139" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Customers" WorkbookPath="[&quot;Data\Output\Invalid Customer Data (&quot; + Date.Today.ToString(&quot;dd-MM-yyyy&quot;) + &quot;).xlsx&quot;]" />
+  </Sequence>
+</Activity>

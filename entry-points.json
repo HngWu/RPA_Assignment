@@ -7,21 +7,9 @@
       "type": "process"
     },
     {
-      "filePath": "Workflows\\3_SendPromoEmails.xaml",
-      "uniqueId": "13c9831b-75dc-46ef-88d4-a9d05678317d",
-      "type": "process",
-      "input": {
-        "type": "object",
-        "properties": {
-          "in_CustomerDT": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          }
-        },
-        "required": []
-      }
+      "filePath": "Workflows\\6_SendPromoEmails.xaml",
+      "uniqueId": "7629c447-26f9-4bc7-b380-7f47bab3ccc3",
+      "type": "process"
     }
   ]
 }

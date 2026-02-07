@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="tUtCMZ5BsEeN6JcGz3w8uA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="30ba12e0-c1b1-4dcf-99ea-a967314210c9" CvTextArea="1442, 860, 20, 14" CvTextArgument="No" CvType="Text" DesignTimeRectangle="1427, 844, 178, 48" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='option' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' tabindex='-1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' type='' class='MocG8c HZ3kWc mhLiyf OIC90c LMgvRb' tabindex='-1' tag='DIV' aaname='' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='No' /&gt;" Guid="05927266-6a86-436d-a05c-1e9dec7cd7be" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
+      <TargetAnchorable.PointOffset>
+        <PointOffset />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="088aca104be470a090ade0aee606042c.png" xmlns="">0vS25iebFd0meMDsL8htEFA</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

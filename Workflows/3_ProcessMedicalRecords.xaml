@@ -1,0 +1,205 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_2_ProcessMedicalRecords" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_CustomerDT" Type="OutArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>_2_ProcessMedicalRecords_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_2_ProcessMedicalRecords" sap:VirtualizedContainerService.HintSize="2392,1817" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strUsername" />
+      <Variable x:TypeArguments="ss:SecureString" Name="strPassword" />
+      <Variable x:TypeArguments="x:String" Name="medicalRecordsURL" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="STAFF_CREDENTIALS" CacheStrategy="None" DisplayName="Get Credential" FolderPath="hngwutan@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="452,186" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[strPassword]" Username="[strUsername]" />
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="MEDICAL_RECORDS_URL" CacheStrategy="None" DisplayName="Get Asset" FolderPath="hngwutan@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="452,186" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[medicalRecordsURL]</OutArgument>
+      </ui:GetRobotAsset.Value>
+    </ui:GetRobotAsset>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.IfOpenedByAppBrowser]" DisplayName="Use Browser Edge: Home | Global Health" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,1422" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsDisplayNameAuto="True" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="f6e590bc-112a-41f6-aa24-4c9c8a97970b" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1228" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Medical Records''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f6e590bc-112a-41f6-aa24-4c9c8a97970b" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="lookitfan.wixsite.com/vitalityvision" CVScreenId="28f39d0c-a5de-420b-a23b-657961863211" ContentHash="YUWUYjeHgEO6tCZ_WxUD5Q" CvTextArea="1878, 354, 105, 14" CvTextArgument="Medical Records" CvType="Text" DesignTimeRectangle="1869, 348, 123, 30" DesignTimeScaleFactor="1" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Medical Records' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Medical Records' tag='P' type='' class='JS76Uv' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Medical Records' /&gt;" Guid="0ce03a4b-0b2d-4e46-8227-b8d06e4e8b45" InformativeScreenshot="b1c9df0c6ca06c6ebcc97eb27a4b0617.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/BI6YkD8lhky7WvXhd5hDwA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home | Global Health' /&gt;" SearchSteps="Selector, CV" Version="V6">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''INPUT SM_ROOT_COMP_input''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" IsPassword="True" ScopeIdentifier="f6e590bc-112a-41f6-aa24-4c9c8a97970b" SecureText="[strPassword]" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="lookitfan.wixsite.com/vitalityvision/medical-records" ContentHash="IKRWaxNB8UqIYxoVdTB1QQ" DesignTimeRectangle="1601, 797, 239, 26" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='SM_ROOT_COMP_input' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='SM_ROOT_COMP_input' tag='INPUT' type='password' class='' placeholder='Password' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="95d3be4f-9514-421a-b03b-783a11e3d2a9" InformativeScreenshot="331e416559c36d24fed642f4fa30cb4f.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/nMX8Ph8r4kK_xeE6gW5ajw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Blank Page | Global Health' /&gt;" SearchSteps="Selector" Version="V6">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Go''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f6e590bc-112a-41f6-aa24-4c9c8a97970b" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="lookitfan.wixsite.com/vitalityvision/medical-records" ContentHash="d1cvsGet3kmrl9ZBt1HVOw" DesignTimeRectangle="1601, 875, 239, 48" DesignTimeScaleFactor="1" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='nZAoOs' aaname='Go' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Go' /&gt;" Guid="2129d87f-0dcd-479f-8f69-c8f62b740b5e" InformativeScreenshot="a5b1a853ea6b504e030d72c0fc19b29a.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/sir0823XQ0uS28BwrnExPA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Blank Page | Global Health' /&gt;" SearchSteps="Selector" Version="V6">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[out_CustomerDT]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Name' ReferenceIdx='0' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Age' ReferenceIdx='1' Name='Age'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Gender' ReferenceIdx='2' Name='Gender'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='On Medication' ReferenceIdx='3' Name='On Medication'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Medication' ReferenceIdx='4' Name='Medication'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='BP Family History' ReferenceIdx='5' Name='BP Family History'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Smoke' ReferenceIdx='6' Name='Smoke'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Drink' ReferenceIdx='7' Name='Drink'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Height (m)' ReferenceIdx='8' Name='Height (m)'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Weight (Kg)' ReferenceIdx='9' Name='Weight (Kg)'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Email Address' ReferenceIdx='10' Name='Email Address'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Attending Clinic' ReferenceIdx='11' Name='Attending Clinic'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Clinic Email Address' ReferenceIdx='12' Name='Clinic Email Address'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Last date of visit' ReferenceIdx='13' Name='Last date of visit'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Name' attr='fulltext' /&gt;&lt;column name='Age' attr='fulltext' /&gt;&lt;column name='Gender' attr='fulltext' /&gt;&lt;column name='On Medication' attr='fulltext' /&gt;&lt;column name='Medication' attr='fulltext' /&gt;&lt;column name='BP Family History' attr='fulltext' /&gt;&lt;column name='Smoke' attr='fulltext' /&gt;&lt;column name='Drink' attr='fulltext' /&gt;&lt;column name='Height (m)' attr='fulltext' /&gt;&lt;column name='Weight (Kg)' attr='fulltext' /&gt;&lt;column name='Email Address' attr='fulltext' /&gt;&lt;column name='Attending Clinic' attr='fulltext' /&gt;&lt;column name='Clinic Email Address' attr='fulltext' /&gt;&lt;column name='Last date of visit' attr='fulltext' /&gt;&lt;/extract-table&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,147" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="f6e590bc-112a-41f6-aa24-4c9c8a97970b" Version="V5">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://lookitfan.wixsite.com/vitalityvision/medical-records" DesignTimeRectangle="14, 515, 3413, 402" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="48d236ff-6012-44aa-ad26-3b2b51769017" InformativeScreenshot="676f2584ddc8382d51fa32f7fa7d88c9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Blank Page | Global Health' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;Data\Output\Raw Customer Data (&quot; + Date.Today.ToString(&quot;dd-MM-yyyy&quot;) + &quot;).xlsx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="416,228" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="Data/Template/Customer Data Template.xlsx" />
+            <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[out_CustomerDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="416,143" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Customers" WorkbookPath="[&quot;Data\Output\Raw Customer Data (&quot; + Date.Today.ToString(&quot;dd-MM-yyyy&quot;) + &quot;).xlsx&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 3456, 1456" BrowserType="Edge" ContentHash="G6sKc4AtUkOVFnLx4qu2lg" IconBase64="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" InformativeScreenshot="2e073b87236cf8455b795a01b331a68c.jpg" Reference="9L5wzsuqe0e4nDMBsS2Ebw/Zqwjsjat8Uq04My8Am5gnA" Selector="&lt;html app='msedge.exe' title='Home | Global Health' /&gt;" Url="[medicalRecordsURL]" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

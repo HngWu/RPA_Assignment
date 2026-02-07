@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="s_-2sXpyFkGjU2IbXPxwow" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" DesignTimeRectangle="1433, 836, 127, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='date' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='date' class='whsOnd zHQkBf' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="328ec060-02dc-4b87-a42e-72d2db3bb14e" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="FuzzySelector" Version="V6">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="c6b714c1-98cf-47dd-87ea-77c86d72a9ff" CvElementArea="1430, 799, 131, 31" CvType="InputBox" DesignTimeRectangle="1433, 807, 26, 16" ElementType="Text" FullSelectorArgument="&lt;webctrl id='i16' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='i16' tag='DIV' type='' class='ds3H7c' aaname='Date' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Date' /&gt;" Guid="c72add53-d182-4b6a-b616-d890054c3774" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.PointOffset>
+        <PointOffset Position="TopLeft" X="9" Y="13" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="b84f4c8d44d4244ae606357e0a11d68d.png" xmlns="">0HhD7FBn-q0iNplZ9ZZYfcQ</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
