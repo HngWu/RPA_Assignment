@@ -535,7 +535,7 @@
                             style="padding: 25px 40px; background-color: #333333; text-align: center;">
                             <p
                                 style="margin: 0 0 12px 0; font-family: Arial, sans-serif; color: #ffffff; font-size: 13px; line-height: 1.4;">
-                                © 2025 Vitality Vision Services. All rights reserved.
+                                © 2026 Vitality Vision Services. All rights reserved.
                             </p>
                             <p
                                 style="margin: 0; font-family: Arial, sans-serif; color: #999999; font-size: 12px; line-height: 1.5;">

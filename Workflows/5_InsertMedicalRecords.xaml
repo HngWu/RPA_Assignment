@@ -108,7 +108,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_4_InsertMedicalRecords" sap:VirtualizedContainerService.HintSize="2392,6874" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_4_InsertMedicalRecords" sap:VirtualizedContainerService.HintSize="2131,6874" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="customerDT" />
     </Sequence.Variables>
@@ -278,7 +278,7 @@
                               </uix:TargetAnchorable>
                             </uix:NClick.Target>
                           </uix:NClick>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,241" sap2010:WorkflowViewState.IdRef="NTypeInto_11" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Medication&quot;).ToString]" Version="V5">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Medication' Input" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,241" sap2010:WorkflowViewState.IdRef="NTypeInto_11" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Medication&quot;).ToString]" Version="V5">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="2bd2a35a-17be-4ee3-97a4-3463f2278939" ContentHash="SFtt1RbM3ECvyypMmxYomQ" CvElementArea="1408, 467, 641, 128" CvType="InputBox" DesignTimeRectangle="1433, 489, 295, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='whsOnd zHQkBf' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="5cb6f86a-2f8a-4d47-9975-9288ce65ed1a" InformativeScreenshot="9f01c0f355f2c9eddd6aba7051748222.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/y3tSqF9_t0qO6UpBFEoRPA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
                                 <uix:TargetAnchorable.Anchors>

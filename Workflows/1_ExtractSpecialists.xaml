@@ -113,7 +113,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_1_ExtractSpecialists" sap:VirtualizedContainerService.HintSize="2392,1316" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_1_ExtractSpecialists" sap:VirtualizedContainerService.HintSize="2131,1316" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd2:DataTable" Name="specialistDT" />
       <Variable x:TypeArguments="x:String" Name="specialistURL" />
@@ -187,7 +187,7 @@
         </uix:TargetApp>
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;Data\Output\Featured Specialist (&quot; + Date.Today.ToString(&quot;dd-MM-yyyy&quot;) + &quot;).xlsx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="452,224" sap2010:WorkflowViewState.IdRef="CopyFile_3" Overwrite="True" Path="Data/Template/Specialist Data Template.xlsx" />
+    <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;Data\Output\Featured Specialist (&quot; + Date.Today.ToString(&quot;dd-MM-yyyy&quot;) + &quot;).xlsx&quot;]" DisplayName="Duplicate Specialist Excel Template " sap:VirtualizedContainerService.HintSize="452,224" sap2010:WorkflowViewState.IdRef="CopyFile_3" Overwrite="True" Path="Data/Template/Specialist Data Template.xlsx" />
     <ui:WriteRange WorkbookPathResource="{x:Null}" DataTable="[specialistDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="452,139" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Featured Specialist" StartingCell="A1" WorkbookPath="[&quot;Data\Output\Featured Specialist (&quot; + Date.Today.ToString(&quot;dd-MM-yyyy&quot;) + &quot;).xlsx&quot;]" />
   </Sequence>
 </Activity>

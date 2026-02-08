@@ -248,23 +248,44 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="2131,2534" sap2010:WorkflowViewState.IdRef="Sequence_36">
+  <Sequence sap:VirtualizedContainerService.HintSize="724,2650" sap2010:WorkflowViewState.IdRef="Sequence_36">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="attendingClinicList" />
       <Variable x:TypeArguments="sd:DataRow" Name="CurrentRow" />
       <Variable x:TypeArguments="sd:DataTable" Name="customerDT" />
       <Variable x:TypeArguments="sd:DataTable" Name="specialistDT" />
       <Variable x:TypeArguments="x:String" Name="logoURL" />
-      <Variable x:TypeArguments="x:String" Name="adminEmail" />
+      <Variable x:TypeArguments="x:String" Name="bmiEmail" />
+      <Variable x:TypeArguments="x:String" Name="attendingClinicEmail" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="LOGO_IMAGE_URL" CacheStrategy="None" DisplayName="Get Asset" FolderPath="hngwutan@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="551,186" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="LOGO_IMAGE_URL" CacheStrategy="None" DisplayName="Get Logo Image URL Asset" FolderPath="hngwutan@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="551,186" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[logoURL]</OutArgument>
+      </ui:GetRobotAsset.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetRobotAsset>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="BMI_EMAIL_HTML" CacheStrategy="None" DisplayName="Get BMI Email HTML Asset" FolderPath="hngwutan@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="551,186" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[bmiEmail]</OutArgument>
+      </ui:GetRobotAsset.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetRobotAsset>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="ATTENDING_CLINIC_EMAIL_HTML" CacheStrategy="None" DisplayName="Get Attending Clinic Email HTML Asset" FolderPath="hngwutan@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="551,186" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[attendingClinicEmail]</OutArgument>
       </ui:GetRobotAsset.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -286,7 +307,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
-    <Assign sap:VirtualizedContainerService.HintSize="551,175" sap2010:WorkflowViewState.IdRef="Assign_17">
+    <Assign DisplayName="Get List of Organisation Names" sap:VirtualizedContainerService.HintSize="551,175" sap2010:WorkflowViewState.IdRef="Assign_17">
       <Assign.To>
         <OutArgument x:TypeArguments="s:String[]">[attendingClinicList]</OutArgument>
       </Assign.To>
@@ -299,16 +320,15 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[customerDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="551,1910" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[customerDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="551,1654" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="549,1737" sap2010:WorkflowViewState.IdRef="Sequence_35">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="549,1481" sap2010:WorkflowViewState.IdRef="Sequence_35">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Double" Name="bmiValue" />
-              <Variable x:TypeArguments="x:String" Name="bmiEmail" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -330,7 +350,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <If Condition="[bmiValue &gt; 25 _&#xA;AndAlso CurrentRow(&quot;BP Family History&quot;).ToString.Trim = &quot;Yes&quot;]" DisplayName="Check for BMI" sap:VirtualizedContainerService.HintSize="515,582" sap2010:WorkflowViewState.IdRef="If_13">
+            <If Condition="[bmiValue &gt; 25 _&#xA;AndAlso CurrentRow(&quot;BP Family History&quot;).ToString.Trim = &quot;Yes&quot;]" DisplayName="Check for BMI" sap:VirtualizedContainerService.HintSize="515,454" sap2010:WorkflowViewState.IdRef="If_13">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -338,20 +358,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,414" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,286" sap2010:WorkflowViewState.IdRef="Sequence_47">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ReadTextFile File="{x:Null}" Content="[bmiEmail]" DisplayName="Read Text File" FileName="Data/Template/BMI Email.txt" sap:VirtualizedContainerService.HintSize="416,128" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:ReadTextFile>
                   <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" Body="[bmiEmail.Replace(&quot;[Customer Name]&quot;, CurrentRow(&quot;Name&quot;).ToString).Replace(&quot;[Company Logo URL]&quot;, logoURL)]" ConnectionMode="LegacyConfiguration" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="416,222" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="Discover Better Health: Seminar Invite" To="[CurrentRow(&quot;Email Address&quot;).ToString]" UseISConnection="False">
                     <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
                       <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
@@ -383,16 +396,15 @@
                 </Sequence>
               </If.Else>
             </If>
-            <If Condition="[attendingClinicList.Contains(&#xA;    CurrentRow(&quot;Attending Clinic&quot;).ToString.Trim&#xA;)]" DisplayName="Check if Attending Clinic matches organisation list" sap:VirtualizedContainerService.HintSize="515,912" sap2010:WorkflowViewState.IdRef="If_14">
+            <If Condition="[attendingClinicList.Contains(&#xA;    CurrentRow(&quot;Attending Clinic&quot;).ToString.Trim&#xA;)]" DisplayName="Check if Attending Clinic matches organisation list" sap:VirtualizedContainerService.HintSize="515,784" sap2010:WorkflowViewState.IdRef="If_14">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,753" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,625" sap2010:WorkflowViewState.IdRef="Sequence_49">
                   <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="attendingClinicEmail" />
                     <Variable x:TypeArguments="sd:DataRow" Name="selectedSpecialist" />
                     <Variable x:TypeArguments="x:String" Name="specialistName" />
                     <Variable x:TypeArguments="x:String" Name="specialistType" />
@@ -406,13 +418,6 @@
                       <x:Boolean x:Key="IsPinned">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ReadTextFile File="{x:Null}" Content="[attendingClinicEmail]" DisplayName="Read Text File" FileName="Data/Template/Attending Clinic Email.txt" sap:VirtualizedContainerService.HintSize="479,128" sap2010:WorkflowViewState.IdRef="ReadTextFile_2">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:ReadTextFile>
                   <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,339" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                     <ui:MultipleAssign.AssignOperations>
                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
