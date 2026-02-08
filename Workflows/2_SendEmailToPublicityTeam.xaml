@@ -101,9 +101,10 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SendEmailToPublicityTeam" sap:VirtualizedContainerService.HintSize="2398,948.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SendEmailToPublicityTeam" sap:VirtualizedContainerService.HintSize="2452,835.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="adminEmail" />
+      <Variable x:TypeArguments="x:String" Name="specialistEmail" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -115,7 +116,12 @@
         <OutArgument x:TypeArguments="x:String">[adminEmail]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" Body="[&quot;Dear publicity team,&quot; &amp; Environment.NewLine &amp; &quot;    Please see attached file for the featured Specialists for &quot; &amp; Date.Today.ToShortDateString() &amp; &quot;.&quot; &amp; Environment.NewLine &amp; &quot;Thank you.&quot;]" ConnectionMode="LegacyConfiguration" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="&lt;Vitality Vision&gt; Feature Specialists" To="[adminEmail]" UseISConnection="False">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="SPECIALIST_EMAIL_HTML" CacheStrategy="None" DisplayName="Get Specialist Email HTML Asset" FolderPath="hngwutan@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="450,186" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[specialistEmail]</OutArgument>
+      </ui:GetRobotAsset.Value>
+    </ui:GetRobotAsset>
+    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" Body="[specialistEmail.Replace(&quot;[DATE]&quot;, DateTime.Now.ToShortDateString)]" ConnectionMode="LegacyConfiguration" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="&lt;Vitality Vision&gt; Feature Specialists" To="[adminEmail]" UseISConnection="False">
       <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
         <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
           <usau:BackupSlot.BackupValues>
