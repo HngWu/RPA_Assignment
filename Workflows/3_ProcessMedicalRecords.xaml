@@ -127,8 +127,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="STAFF_CREDENTIALS" CacheStrategy="None" DisplayName="Get Credential" FolderPath="hngwutan@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="452,186" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[strPassword]" Username="[strUsername]" />
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="MEDICAL_RECORDS_URL" CacheStrategy="None" DisplayName="Get Asset" FolderPath="hngwutan@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="452,186" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="STAFF_CREDENTIALS" CacheStrategy="None" DisplayName="Get Login Password" FolderPath="hngwutan@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="452,186" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[strPassword]" Username="[strUsername]" />
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="MEDICAL_RECORDS_URL" CacheStrategy="None" DisplayName="Get Medical Records URL" FolderPath="hngwutan@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="452,186" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[medicalRecordsURL]</OutArgument>
       </ui:GetRobotAsset.Value>

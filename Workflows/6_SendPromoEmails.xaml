@@ -248,13 +248,14 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="2392,2534" sap2010:WorkflowViewState.IdRef="Sequence_36">
+  <Sequence sap:VirtualizedContainerService.HintSize="2131,2534" sap2010:WorkflowViewState.IdRef="Sequence_36">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="attendingClinicList" />
       <Variable x:TypeArguments="sd:DataRow" Name="CurrentRow" />
       <Variable x:TypeArguments="sd:DataTable" Name="customerDT" />
       <Variable x:TypeArguments="sd:DataTable" Name="specialistDT" />
       <Variable x:TypeArguments="x:String" Name="logoURL" />
+      <Variable x:TypeArguments="x:String" Name="adminEmail" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -290,7 +291,7 @@
         <OutArgument x:TypeArguments="s:String[]">[attendingClinicList]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="s:String[]">[specialistDT.AsEnumerable().Select(Function(row) row("Organisation").ToString()).ToArray()]</InArgument>
+        <InArgument x:TypeArguments="s:String[]">[specialistDT.AsEnumerable().Select(Function(row) System.Text.RegularExpressions.Regex.Replace(row("Organisation").ToString(), "[\p{C}]", "").Trim()).ToArray()]</InArgument>
       </Assign.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -329,10 +330,11 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <If Condition="[bmiValue &gt; 25 _&#xD;&#xA;AndAlso CurrentRow(&quot;BP Family History&quot;).ToString.Trim = &quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="515,582" sap2010:WorkflowViewState.IdRef="If_13">
+            <If Condition="[bmiValue &gt; 25 _&#xA;AndAlso CurrentRow(&quot;BP Family History&quot;).ToString.Trim = &quot;Yes&quot;]" DisplayName="Check for BMI" sap:VirtualizedContainerService.HintSize="515,582" sap2010:WorkflowViewState.IdRef="If_13">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
@@ -350,7 +352,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ReadTextFile>
-                  <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" Body="[bmiEmail.Replace(&quot;[Customer Name]&quot;, CurrentRow(&quot;Name&quot;).ToString).Replace(&quot;[Company Logo URL]&quot;, logoURL)]" ConnectionMode="Undefined" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="416,222" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="Discover Better Health: Seminar Invite" To="hngwudev@gmail.com" UseISConnection="False">
+                  <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" Body="[bmiEmail.Replace(&quot;[Customer Name]&quot;, CurrentRow(&quot;Name&quot;).ToString).Replace(&quot;[Company Logo URL]&quot;, logoURL)]" ConnectionMode="LegacyConfiguration" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="416,222" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="Discover Better Health: Seminar Invite" To="[CurrentRow(&quot;Email Address&quot;).ToString]" UseISConnection="False">
                     <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
                       <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
                         <usau:BackupSlot.BackupValues>
@@ -359,7 +361,9 @@
                       </usau:BackupSlot>
                     </ui:SendOutlookMail.ConnectionDetailsBackupSlot>
                     <ui:SendOutlookMail.Files>
-                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                        <InArgument x:TypeArguments="x:String">Data/Input/Vitality Essentials - Your Guide to Better Health.pdf</InArgument>
+                      </scg:List>
                     </ui:SendOutlookMail.Files>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -379,7 +383,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <If Condition="[attendingClinicList.Contains(&#xD;&#xA;    CurrentRow(&quot;Attending Clinic&quot;).ToString.Trim&#xD;&#xA;)]" sap:VirtualizedContainerService.HintSize="515,912" sap2010:WorkflowViewState.IdRef="If_14">
+            <If Condition="[attendingClinicList.Contains(&#xA;    CurrentRow(&quot;Attending Clinic&quot;).ToString.Trim&#xA;)]" DisplayName="Check if Attending Clinic matches organisation list" sap:VirtualizedContainerService.HintSize="515,912" sap2010:WorkflowViewState.IdRef="If_14">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -465,7 +469,7 @@
                             <OutArgument x:TypeArguments="x:String">[attendingClinicEmail]</OutArgument>
                           </ui:AssignOperation.To>
                           <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="x:String">[attendingClinicEmail.Replace("[Company Logo URL]", logoURL).Replace("[Specialization]", specialistType).Replace("[Clinic/Organisation Name]", specialistOrganisation).Replace("[Clinic Address]", specialistOrganisation).Replace("[Clinic Email]", CurrentRow("Clinic Email Address").ToString()).Replace("[Specialist Name]", specialistName).Replace("[Specialist Image URL]", specialistImageURL).Replace("[Customer Name]", CurrentRow("Name").ToString)]</InArgument>
+                            <InArgument x:TypeArguments="x:String">[attendingClinicEmail.Replace("[Company Logo URL]", logoURL).Replace("[Specialization]", specialistType).Replace("[Clinic/Organisation Name]", specialistOrganisation).Replace("[Clinic Address]", specialistOrganisation).Replace("[Clinic Email]", CurrentRow("Clinic Email Address").ToString()).Replace("[Specialist Name]", specialistName).Replace("[Specialist Image URL]", specialistImageURL).Replace("[Customer Name]", CurrentRow("Name").ToString).Replace("[Description]", specialistDescription)]</InArgument>
                           </ui:AssignOperation.Value>
                         </ui:AssignOperation>
                       </scg:List>
@@ -476,7 +480,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:MultipleAssign>
-                  <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" Body="[attendingClinicEmail]" ConnectionMode="LegacyConfiguration" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="479,222" sap2010:WorkflowViewState.IdRef="SendOutlookMail_3" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="Your Attending Specialist Takes the Spotlight!" To="hngwudev@gmail.com" UseISConnection="False">
+                  <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" Body="[attendingClinicEmail]" ConnectionMode="LegacyConfiguration" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="479,222" sap2010:WorkflowViewState.IdRef="SendOutlookMail_3" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="Your Attending Specialist Takes the Spotlight!" To="[CurrentRow(&quot;Email Address&quot;).ToString]" UseISConnection="False">
                     <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
                       <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
                         <usau:BackupSlot.BackupValues>

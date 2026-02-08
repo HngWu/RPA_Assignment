@@ -108,7 +108,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_4_InsertMedicalRecords" sap:VirtualizedContainerService.HintSize="2392,7716" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_4_InsertMedicalRecords" sap:VirtualizedContainerService.HintSize="2392,6874" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="customerDT" />
     </Sequence.Variables>
@@ -118,31 +118,31 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[customerDT]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="524,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Customers" WorkbookPath="[&quot;Data\Output\Valid Customer Data (&quot; + Date.Today.ToString(&quot;dd-MM-yyyy&quot;) + &quot;).xlsx&quot;]" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[customerDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="524,7573" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[customerDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="524,6731" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,7400" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,6558" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.IfOpenedByAppBrowser]" DisplayName="Edge Basic Medical Screening - Data Bank(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,7336" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.IfOpenedByAppBrowser]" DisplayName="Edge Medical Records Google Form" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,6494" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,7138" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,6296" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''DIV''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''I have checked that the patient information data is correct.''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/viewform" ContentHash="PlsZTA38IEeNuB0pQbf--w" DesignTimeRectangle="1435, 544, 16, 16" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl idx='2' parentid='i7' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='i7' tag='DIV' class='uHMk6b fsHoPb' aaname='' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="91184314-bd92-407b-84f6-05fc9c4b5090" InformativeScreenshot="2176ec0da4e15113526dc0ba31c70aaf.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/c9ZvWcZJYUK5sN9vu1RoQg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector" Version="V6">
                           <uix:TargetAnchorable.PointOffset>
@@ -151,7 +151,7 @@
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Next''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Section 1 ''Next'' Button" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/viewform" CVScreenId="2bd2a35a-17be-4ee3-97a4-3463f2278939" ContentHash="oVDwsbtAY0uynGGaU0CxjQ" CvElementArea="1405, 604, 85, 41" CvTextArea="1431, 618, 33, 13" CvTextArgument="Next" CvType="Button" DesignTimeRectangle="1408, 607, 80, 36" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='SPAN' class='l4V7wb Fxmcue' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Next' /&gt;" Guid="4fde155a-02d2-477e-8e8f-168abea8d845" InformativeScreenshot="4d5d25e11444d785f350b4656611a53c.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/5LseonmRNEq7BSrkN_cTew" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
                           <uix:TargetAnchorable.PointOffset>
@@ -160,27 +160,36 @@
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''INPUT''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Name&quot;).ToString]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Name'' Input" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Name&quot;).ToString]" Version="V5">
                       <uix:NTypeInto.Target>
-                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="2bd2a35a-17be-4ee3-97a4-3463f2278939" ContentHash="aAggsfnvPUKT63eoAxeGUg" CvElementArea="1408, 467, 641, 128" CvType="InputBox" DesignTimeRectangle="1433, 489, 295, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='whsOnd zHQkBf' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="5cb6f86a-2f8a-4d47-9975-9288ce65ed1a" InformativeScreenshot="cd276ae3f3bf6f34a76f928e9af0746a.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/y3tSqF9_t0qO6UpBFEoRPA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
+                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="2bd2a35a-17be-4ee3-97a4-3463f2278939" ContentHash="SFtt1RbM3ECvyypMmxYomQ" CvElementArea="1408, 467, 641, 128" CvType="InputBox" DesignTimeRectangle="1433, 489, 295, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='whsOnd zHQkBf' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="5cb6f86a-2f8a-4d47-9975-9288ce65ed1a" InformativeScreenshot="9f01c0f355f2c9eddd6aba7051748222.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/y3tSqF9_t0qO6UpBFEoRPA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                          </uix:TargetAnchorable.Anchors>
                           <uix:TargetAnchorable.PointOffset>
                             <uix:PointOffset />
                           </uix:TargetAnchorable.PointOffset>
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''INPUT''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Age&quot;).ToString]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Age'' Input" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Age&quot;).ToString]" Version="V5">
                       <uix:NTypeInto.Target>
-                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" ContentHash="Nv1vsciJCkq2d8FqHhkqBg" DesignTimeRectangle="1433, 639, 128, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-labelledby='i6 i9' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-labelledby='i6 i9' tag='INPUT' type='text' class='whsOnd zHQkBf' aaname='' matching:aria-labelledby='fuzzy' fuzzylevel:aria-labelledby='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="bc187919-391a-4858-848c-ae130c1dd35f" InformativeScreenshot="e8a08e2fb85a9028f7c5d650acfce865.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/qqVhf50eB0ixL5SLnhtHmw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector" Version="V6">
+                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" ContentHash="1SQovjdp3k2GdWUgvlgu8w" DesignTimeRectangle="1433, 639, 128, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-labelledby='i6 i9' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-labelledby='i6 i9' tag='INPUT' type='text' class='whsOnd zHQkBf' aaname='' matching:aria-labelledby='fuzzy' fuzzylevel:aria-labelledby='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="bc187919-391a-4858-848c-ae130c1dd35f" InformativeScreenshot="b4bd118ee918f5638aac87ce13e2ff26.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/qqVhf50eB0ixL5SLnhtHmw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector" Version="V6">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                          </uix:TargetAnchorable.Anchors>
                           <uix:TargetAnchorable.PointOffset>
                             <uix:PointOffset />
                           </uix:TargetAnchorable.PointOffset>
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Choose''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Choose'' For Gender dropdown" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="77d997b2-1561-4714-84c0-bc93b33cbeb8" ContentHash="2W9wCgn9Ek2TPJ1Zy9jAKg" CvElementArea="1432, 813, 181, 53" CvType="InputBox" DesignTimeRectangle="1434, 816, 176, 48" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='option' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' tag='DIV' type='' class='MocG8c HZ3kWc mhLiyf LMgvRb KKjvXb DEh1R' aaname='' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Choose' /&gt;" Guid="76cb7a28-0914-47d7-b581-d4aa96dc3b60" InformativeScreenshot="94ef7a4147a6dcf05e8543709230d9a3.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/4iabJmIKH0i9qvGC05mItw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
+                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="77d997b2-1561-4714-84c0-bc93b33cbeb8" ContentHash="sL4CRe4tr0OzDFxCeie0Ig" CvElementArea="1432, 813, 181, 53" CvType="InputBox" DesignTimeRectangle="1434, 816, 176, 48" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='option' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' tag='DIV' type='' class='MocG8c HZ3kWc mhLiyf LMgvRb KKjvXb DEh1R' aaname='' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Choose' /&gt;" Guid="76cb7a28-0914-47d7-b581-d4aa96dc3b60" InformativeScreenshot="43e900e2679f21f4277e35a32f7c61cb.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/4iabJmIKH0i9qvGC05mItw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                          </uix:TargetAnchorable.Anchors>
                           <uix:TargetAnchorable.PointOffset>
                             <uix:PointOffset />
                           </uix:TargetAnchorable.PointOffset>
@@ -225,18 +234,9 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Next''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,194" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Next''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="5dd20259-d242-400e-a1cb-40329992dc1f" ContentHash="3Xv8y_lNU02tiK5FGg_VPA" CvElementArea="1500, 870, 85, 41" CvTextArea="1526, 884, 33, 13" CvTextArgument="Next" CvType="Button" DesignTimeRectangle="1503, 873, 79, 36" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='l4V7wb Fxmcue' tag='SPAN' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Next' /&gt;" Guid="6dafcce9-2d8b-4ad7-9305-25afac2dcf8d" InformativeScreenshot="12792ba7e5f9c2173064444c4ee02f87.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/rt8IxLt07ke5clt97PpxDQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
-                          <uix:TargetAnchorable.PointOffset>
-                            <uix:PointOffset />
-                          </uix:TargetAnchorable.PointOffset>
-                        </uix:TargetAnchorable>
-                      </uix:NClick.Target>
-                    </uix:NClick>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Is Patient on Medication" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,194" sap2010:WorkflowViewState.IdRef="NClick_21" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
-                      <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="77d997b2-1561-4714-84c0-bc93b33cbeb8" ContentHash="2W9wCgn9Ek2TPJ1Zy9jAKg" CvElementArea="1432, 813, 181, 53" CvType="InputBox" DesignTimeRectangle="1434, 816, 176, 48" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='option' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' tag='DIV' type='' class='MocG8c HZ3kWc mhLiyf LMgvRb KKjvXb DEh1R' aaname='' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Choose' /&gt;" Guid="76cb7a28-0914-47d7-b581-d4aa96dc3b60" InformativeScreenshot="94ef7a4147a6dcf05e8543709230d9a3.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/4iabJmIKH0i9qvGC05mItw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
+                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="5dd20259-d242-400e-a1cb-40329992dc1f" ContentHash="KDnhtM6rK0y3i7i4P4aPRg" CvElementArea="1500, 870, 85, 41" CvTextArea="1526, 884, 33, 13" CvTextArgument="Next" CvType="Button" DesignTimeRectangle="1503, 873, 79, 36" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='l4V7wb Fxmcue' tag='SPAN' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Next' /&gt;" Guid="6dafcce9-2d8b-4ad7-9305-25afac2dcf8d" InformativeScreenshot="216b6965944293c898ef3ec21ecfca4e.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/rt8IxLt07ke5clt97PpxDQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
                           <uix:TargetAnchorable.Anchors>
                             <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
                           </uix:TargetAnchorable.Anchors>
@@ -246,15 +246,27 @@
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <If Condition="[CurrentRow(&quot;On Medication&quot;).ToString = &quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="452,879" sap2010:WorkflowViewState.IdRef="If_4">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Choose'' for is Patient on Medication dropdown" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_21" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="77d997b2-1561-4714-84c0-bc93b33cbeb8" ContentHash="sL4CRe4tr0OzDFxCeie0Ig" CvElementArea="1432, 813, 181, 53" CvType="InputBox" DesignTimeRectangle="1434, 816, 176, 48" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='option' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' tag='DIV' type='' class='MocG8c HZ3kWc mhLiyf LMgvRb KKjvXb DEh1R' aaname='' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Choose' /&gt;" Guid="76cb7a28-0914-47d7-b581-d4aa96dc3b60" InformativeScreenshot="43e900e2679f21f4277e35a32f7c61cb.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/4iabJmIKH0i9qvGC05mItw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                          </uix:TargetAnchorable.Anchors>
+                          <uix:TargetAnchorable.PointOffset>
+                            <uix:PointOffset />
+                          </uix:TargetAnchorable.PointOffset>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <If Condition="[CurrentRow(&quot;On Medication&quot;).ToString = &quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="452,899" sap2010:WorkflowViewState.IdRef="If_4">
                       <If.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,495" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,503" sap2010:WorkflowViewState.IdRef="Sequence_13">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Yes'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_22" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Yes'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_22" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="77d997b2-1561-4714-84c0-bc93b33cbeb8" ContentHash="3GZiyGa8NkWqGCmQYBI1Qg" CvElementArea="1500, 902, 85, 41" CvType="Button" DesignTimeRectangle="1434, 880, 178, 48" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='option' tabindex='-1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' tabindex='-1' tag='DIV' type='' class='MocG8c HZ3kWc mhLiyf OIC90c LMgvRb' aaname='' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Female' /&gt;" Guid="ba3f2d37-5509-4998-95b6-59997492e8f9" InformativeScreenshot="b8c48e46833a568d8ccdbee134fbcf5e.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/R_HYkN0xu0u8nD9Lk7vd5g" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
                                 <uix:TargetAnchorable.Anchors>
@@ -268,7 +280,7 @@
                           </uix:NClick>
                           <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,241" sap2010:WorkflowViewState.IdRef="NTypeInto_11" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Medication&quot;).ToString]" Version="V5">
                             <uix:NTypeInto.Target>
-                              <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="2bd2a35a-17be-4ee3-97a4-3463f2278939" ContentHash="aAggsfnvPUKT63eoAxeGUg" CvElementArea="1408, 467, 641, 128" CvType="InputBox" DesignTimeRectangle="1433, 489, 295, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='whsOnd zHQkBf' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="5cb6f86a-2f8a-4d47-9975-9288ce65ed1a" InformativeScreenshot="cd276ae3f3bf6f34a76f928e9af0746a.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/y3tSqF9_t0qO6UpBFEoRPA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
+                              <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="2bd2a35a-17be-4ee3-97a4-3463f2278939" ContentHash="SFtt1RbM3ECvyypMmxYomQ" CvElementArea="1408, 467, 641, 128" CvType="InputBox" DesignTimeRectangle="1433, 489, 295, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='whsOnd zHQkBf' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="5cb6f86a-2f8a-4d47-9975-9288ce65ed1a" InformativeScreenshot="9f01c0f355f2c9eddd6aba7051748222.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/y3tSqF9_t0qO6UpBFEoRPA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
                                 <uix:TargetAnchorable.Anchors>
                                   <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
                                 </uix:TargetAnchorable.Anchors>
@@ -281,13 +293,13 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,245" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,253" sap2010:WorkflowViewState.IdRef="Sequence_14">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'No'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_23" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'No'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NClick_23" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="61a76be9-9a8b-45dc-83cf-30376f09e3dc" ContentHash="5_MB5nY63keGUwIMXLS0mw" CvTextArea="1449, 911, 34, 14" CvTextArgument="Male" CvType="Text" DesignTimeRectangle="1434, 895, 178, 48" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='option' idx='2' tabindex='-1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' type='' tabindex='-1' tag='DIV' class='MocG8c HZ3kWc mhLiyf OIC90c LMgvRb' aaname='' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Male' /&gt;" Guid="d557eeb8-62ea-4ab5-99ea-b3ca64e2b113" InformativeScreenshot="f8c812d46c46c9124bdd1660e5b6ea58.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/sPk1d5ef5ESX97aFcx6jCQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
                                 <uix:TargetAnchorable.Anchors>
@@ -302,7 +314,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Choose''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,194" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Choose'' for family history dropdown" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="71e528b5-b5bb-4841-9133-bebd2c4daabe" ContentHash="iZuEq_JyLk6oDucqlEXmmA" CvElementArea="1424, 794, 181, 53" CvType="InputBox" DesignTimeRectangle="1427, 797, 176, 48" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='option' idx='2' tabindex='0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' type='' tabindex='0' tag='DIV' class='MocG8c HZ3kWc mhLiyf LMgvRb KKjvXb DEh1R' aaname='' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:tabindex='fuzzy' fuzzylevel:tabindex='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Choose' /&gt;" Guid="dc329a52-ce4f-4882-b24c-f13c4ba1db5c" InformativeScreenshot="0fcc189547080669b9e4df251abc225a.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/GlSQKLCSp02veiSROs-JeQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
                           <uix:TargetAnchorable.PointOffset>
@@ -311,9 +323,9 @@
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <ui:IfElseIfV2 Condition="[CurrentRow(&quot;BP Family History&quot;).ToString = &quot;Yes&quot;]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="452,971" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+                    <ui:IfElseIfV2 Condition="[CurrentRow(&quot;BP Family History&quot;).ToString = &quot;Yes&quot;]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="452,61" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
                       <ui:IfElseIfV2.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,249" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,253" sap2010:WorkflowViewState.IdRef="Sequence_7">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -334,7 +346,7 @@
                         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                           <ui:IfElseIfBlock BlockType="ElseIf" Condition="[CurrentRow(&quot;BP Family History&quot;).ToString = &quot;No&quot;]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
                             <ui:IfElseIfBlock.Then>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,249" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,253" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -354,8 +366,14 @@
                           </ui:IfElseIfBlock>
                         </sc:BindingList>
                       </ui:IfElseIfV2.ElseIfs>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                       <ui:IfElseIfV2.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,249" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,253" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -373,9 +391,9 @@
                         </Sequence>
                       </ui:IfElseIfV2.Then>
                     </ui:IfElseIfV2>
-                    <If Condition="[CurrentRow(&quot;Smoke&quot;).ToString = &quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="452,637" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If Condition="[CurrentRow(&quot;Smoke&quot;).ToString = &quot;Yes&quot;]" DisplayName="Smoke Radio Button Input" sap:VirtualizedContainerService.HintSize="452,649" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,249" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,253" sap2010:WorkflowViewState.IdRef="Sequence_9">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -393,7 +411,7 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,249" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,253" sap2010:WorkflowViewState.IdRef="Sequence_10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -411,9 +429,9 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <If Condition="[CurrentRow(&quot;Drink&quot;).ToString = &quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="452,637" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If Condition="[CurrentRow(&quot;Drink&quot;).ToString = &quot;Yes&quot;]" DisplayName="Alcohol Radio Button Input" sap:VirtualizedContainerService.HintSize="452,649" sap2010:WorkflowViewState.IdRef="If_3">
                       <If.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,249" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,253" sap2010:WorkflowViewState.IdRef="Sequence_11">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -431,7 +449,7 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,249" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,253" sap2010:WorkflowViewState.IdRef="Sequence_12">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -449,7 +467,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''INPUT''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Height (m)&quot;).ToString]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Height (m)'' input" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Height (m)&quot;).ToString]" Version="V5">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="b73be4d2-4502-420c-882c-fcebb9dcf3ce" ContentHash="zaoDJTPSZUK9nl5krOWz2g" CvTextArea="1424, 1033, 81, 13" CvTextArgument="Your answer" CvType="Text" DesignTimeRectangle="1426, 1029, 128, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-labelledby='i38 i41' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-labelledby='i38 i41' tag='INPUT' type='text' class='whsOnd zHQkBf' aaname='' matching:aria-labelledby='fuzzy' fuzzylevel:aria-labelledby='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="947d1706-55ce-4fd5-8dcd-dbffc65fd6e3" InformativeScreenshot="b813803c7b9f4cafd2681e3a6a16a119.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/pMJC5lidxEiLAiiR3MoXaQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
                           <uix:TargetAnchorable.PointOffset>
@@ -458,7 +476,7 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''INPUT''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Weight (Kg)&quot;).ToString]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Weight (kg)'' input" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Weight (Kg)&quot;).ToString]" Version="V5">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="0553a9de-11e5-4392-a43f-6171b4b4928a" ContentHash="J7HXSkH_00GD4H483eP1Dg" CvTextArea="1424, 1171, 81, 13" CvTextArgument="Your answer" CvType="Text" DesignTimeRectangle="1426, 1167, 128, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-labelledby='i43 i46' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-labelledby='i43 i46' tag='INPUT' type='text' class='whsOnd zHQkBf' aaname='' matching:aria-labelledby='fuzzy' fuzzylevel:aria-labelledby='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="d4faf0d8-d1cd-44de-8d07-0046149934cb" InformativeScreenshot="b78ae2e5a50d6592d6fdaf5cad449745.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/1VYXflnAc0mHnaDQvcAoJw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
                           <uix:TargetAnchorable.PointOffset>
@@ -467,9 +485,9 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Next(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,194" sap2010:WorkflowViewState.IdRef="NClick_19" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Section 2 'Next' Button" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_19" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="5dd20259-d242-400e-a1cb-40329992dc1f" ContentHash="3Xv8y_lNU02tiK5FGg_VPA" CvElementArea="1500, 870, 85, 41" CvTextArea="1526, 884, 33, 13" CvTextArgument="Next" CvType="Button" DesignTimeRectangle="1503, 873, 79, 36" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='l4V7wb Fxmcue' tag='SPAN' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Next' /&gt;" Guid="6dafcce9-2d8b-4ad7-9305-25afac2dcf8d" InformativeScreenshot="12792ba7e5f9c2173064444c4ee02f87.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/rt8IxLt07ke5clt97PpxDQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
+                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="5dd20259-d242-400e-a1cb-40329992dc1f" ContentHash="KDnhtM6rK0y3i7i4P4aPRg" CvElementArea="1500, 870, 85, 41" CvTextArea="1526, 884, 33, 13" CvTextArgument="Next" CvType="Button" DesignTimeRectangle="1503, 873, 79, 36" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='l4V7wb Fxmcue' tag='SPAN' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Next' /&gt;" Guid="6dafcce9-2d8b-4ad7-9305-25afac2dcf8d" InformativeScreenshot="216b6965944293c898ef3ec21ecfca4e.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/rt8IxLt07ke5clt97PpxDQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
                           <uix:TargetAnchorable.Anchors>
                             <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
                           </uix:TargetAnchorable.Anchors>
@@ -479,9 +497,9 @@
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,246" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Attending Clinic&quot;).ToString]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Attending Clinic' Input" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Attending Clinic&quot;).ToString]" Version="V5">
                       <uix:NTypeInto.Target>
-                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="2bd2a35a-17be-4ee3-97a4-3463f2278939" ContentHash="aAggsfnvPUKT63eoAxeGUg" CvElementArea="1408, 467, 641, 128" CvType="InputBox" DesignTimeRectangle="1433, 489, 295, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='whsOnd zHQkBf' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="5cb6f86a-2f8a-4d47-9975-9288ce65ed1a" InformativeScreenshot="cd276ae3f3bf6f34a76f928e9af0746a.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/y3tSqF9_t0qO6UpBFEoRPA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
+                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="2bd2a35a-17be-4ee3-97a4-3463f2278939" ContentHash="SFtt1RbM3ECvyypMmxYomQ" CvElementArea="1408, 467, 641, 128" CvType="InputBox" DesignTimeRectangle="1433, 489, 295, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='whsOnd zHQkBf' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="5cb6f86a-2f8a-4d47-9975-9288ce65ed1a" InformativeScreenshot="9f01c0f355f2c9eddd6aba7051748222.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/y3tSqF9_t0qO6UpBFEoRPA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
                           <uix:TargetAnchorable.Anchors>
                             <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
                           </uix:TargetAnchorable.Anchors>
@@ -491,9 +509,9 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT(1)'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Clinic Email Address&quot;).ToString]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Clinic Email Address' Input" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Clinic Email Address&quot;).ToString]" Version="V5">
                       <uix:NTypeInto.Target>
-                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" ContentHash="Nv1vsciJCkq2d8FqHhkqBg" DesignTimeRectangle="1433, 639, 128, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-labelledby='i6 i9' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-labelledby='i6 i9' tag='INPUT' type='text' class='whsOnd zHQkBf' aaname='' matching:aria-labelledby='fuzzy' fuzzylevel:aria-labelledby='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="bc187919-391a-4858-848c-ae130c1dd35f" InformativeScreenshot="e8a08e2fb85a9028f7c5d650acfce865.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/qqVhf50eB0ixL5SLnhtHmw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector" Version="V6">
+                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" ContentHash="1SQovjdp3k2GdWUgvlgu8w" DesignTimeRectangle="1433, 639, 128, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-labelledby='i6 i9' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-labelledby='i6 i9' tag='INPUT' type='text' class='whsOnd zHQkBf' aaname='' matching:aria-labelledby='fuzzy' fuzzylevel:aria-labelledby='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="bc187919-391a-4858-848c-ae130c1dd35f" InformativeScreenshot="b4bd118ee918f5638aac87ce13e2ff26.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/qqVhf50eB0ixL5SLnhtHmw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector" Version="V6">
                           <uix:TargetAnchorable.Anchors>
                             <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
                           </uix:TargetAnchorable.Anchors>
@@ -503,11 +521,11 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Date''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,246" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Last date of visit&quot;).toString]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Date of last visit'' Input" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="SameAsCard" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Text="[CurrentRow(&quot;Last date of visit&quot;).toString]" Version="V5">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" ContentHash="s_-2sXpyFkGjU2IbXPxwow" DesignTimeRectangle="1433, 836, 127, 24" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='date' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='date' class='whsOnd zHQkBf' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="328ec060-02dc-4b87-a42e-72d2db3bb14e" InformativeScreenshot="b84f4c8d44d4244ae606357e0a11d68d.png" IsResponsive="True" Reference="9L5wzsuqe0e4nDMBsS2Ebw/8cgE8g1kI0yJnB76fniDkA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="FuzzySelector" Version="V6">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target CVScreenId="c6b714c1-98cf-47dd-87ea-77c86d72a9ff" CvElementArea="1430, 799, 131, 31" CvType="InputBox" DesignTimeRectangle="1433, 807, 26, 16" ElementType="Text" FullSelectorArgument="&lt;webctrl id='i16' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='i16' tag='DIV' type='' class='ds3H7c' aaname='Date' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Date' /&gt;" Guid="c72add53-d182-4b6a-b616-d890054c3774" SearchSteps="FuzzySelector, CV" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
@@ -517,9 +535,9 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Next''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,189" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click &quot;Submit&quot; Button" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,189" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22d6b33b-3e70-4d00-96d6-092ad2ad0d78" Version="V5">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="5dd20259-d242-400e-a1cb-40329992dc1f" ContentHash="3Xv8y_lNU02tiK5FGg_VPA" CvElementArea="1500, 870, 85, 41" CvTextArea="1526, 884, 33, 13" CvTextArgument="Next" CvType="Button" DesignTimeRectangle="1503, 873, 79, 36" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='l4V7wb Fxmcue' tag='SPAN' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Next' /&gt;" Guid="6dafcce9-2d8b-4ad7-9305-25afac2dcf8d" InformativeScreenshot="12792ba7e5f9c2173064444c4ee02f87.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/rt8IxLt07ke5clt97PpxDQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
+                        <uix:TargetAnchorable BrowserURL="docs.google.com/forms/d/e/1FAIpQLScKvRhq00tQsePuLzYacRT7Da_pNsefTL7yNXza8TXgwmoupQ/formResponse" CVScreenId="5dd20259-d242-400e-a1cb-40329992dc1f" ContentHash="KDnhtM6rK0y3i7i4P4aPRg" CvElementArea="1500, 870, 85, 41" CvTextArea="1526, 884, 33, 13" CvTextArgument="Next" CvType="Button" DesignTimeRectangle="1503, 873, 79, 36" DesignTimeScaleFactor="1" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='l4V7wb Fxmcue' tag='SPAN' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Next' /&gt;" Guid="6dafcce9-2d8b-4ad7-9305-25afac2dcf8d" InformativeScreenshot="216b6965944293c898ef3ec21ecfca4e.png" Reference="9L5wzsuqe0e4nDMBsS2Ebw/rt8IxLt07ke5clt97PpxDQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Basic Medical Screening - Data Bank' /&gt;" SearchSteps="Selector, CV" Version="V6">
                           <uix:TargetAnchorable.Anchors>
                             <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
                           </uix:TargetAnchorable.Anchors>
